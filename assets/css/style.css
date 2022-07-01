@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* hiệu ứng di chuyển trang */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text--while {
+    color: #fff !important;
+}
+
+.m_-16 {
+    margin: 0 -8px;
+}
+.mb_37 {
+    margin-bottom: 37px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.row-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.row-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.col {
+    margin: 0 8px;
+}
+.col-full {
+    width: 100%;
+}
+.col-half {
+    width: 50%;
+}
+.col-third {
+    width: 33.33333%;
+}
+
+
+#header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    height: 46px;
+    z-index: 1;
+}
+
+#header #nav {
+    display: block;
+}
+
+#header #nav .nav_item {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+#header #nav .nav_item > a {
+    display: block;
+    color: #fff;
+    height: 100%;
+    text-decoration: none;
+    padding: 0 24px;
+    line-height: 46px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#header #nav .nav_item:hover > a {
+    background-color: #ccc;
+    color: black;
+}
+#header #nav .nav_item:hover .sub-nav {
+    display: block;
+}
+#header #nav .sub-nav {
+    display: none;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+}
+
+#header #nav .sub-nav .sub-nav__item a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding:  8px 16px;
+    line-height: 22.5px;
+}
+
+#header #nav .sub-nav .sub-nav__item:hover a {
+    background-color: #ccc;
+}
+
+#search-nav-mobile {
+    display: none;
+}
+
+#search-nav-mobile,
+#search-nav {
+    color: #fff;
+}
+
+#search-nav-mobile .search-nav__icon,
+#search-nav .search-nav__icon {
+    line-height: 46px;
+    padding: 0 24px;
+    font-size: 14px;
+}
+
+#search-nav .search-nav__icon:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#search-nav-mobile:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(../img/slider/chicago.jpg) top center / cover no-repeat;
+    position: relative;
+}
+
+#slider .text__container {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    padding: 32px 16px;
+}
+
+#slider .text__header {
+    display: block;
+    height: auto;
+    margin: 25px 0;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Segor UI", Arial , sans-serif;
+}
+
+#slider .text__description {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 600;
+}
+
+#content {
+    
+}
+
+.content-about-band{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+.content__heading {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.content__sub-heading {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 15px;
+    text-align: center;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.about {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.team {
+    padding:  32px 0;
+    text-align: center;
+}
+
+.member-name {
+    font-size: 15px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.member-img {
+    width: 80%;
+    margin-bottom: 16px;
+}
+
+.content__overlay {
+    width: 100%;
+    background-color: black;
+}
+
+.content-tour-band {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+.tour-list {
+    background-color: #fff;
+    width: 100%;
+    margin: 32px 0px;
+    list-style: none;
+}
+
+.tour-item {
+    display: block;
+    padding: 8px 16px;
+    color: #757575;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.tour-item .sold-out {
+    display: inline-block;
+    background-color: red;
+    margin-left: 16px;
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.tour-item .left-quality {
+    float: right;
+    background-color: black;
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+
+.places {
+    padding-bottom: 32px;
+}
+
+.info-tour-wrap {
+    margin-bottom: 16px;
+}
+
+.info-tour-wrap .place-img {
+    display: block;
+    width: 100%;
+}
+
+.info-tour-wrap .place__body {
+    background-color: #fff;
+    display: inline-block;
+    padding: 0 16px;
+    font-size: 15px;
+}
+
+.info-tour-wrap .place__name {
+    display: block;
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.info-tour-wrap .place__time {
+    display: block;
+    margin: 15px 0;
+    font-size: 15px;
+    color: #757575;
+}
+
+.info-tour-wrap .place__desc {
+    display: block;
+    margin:  15px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.info-tour-wrap .buy-tickets {
+    background-color: black;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.4;
+    border: none;
+}
+
+.info-tour-wrap .buy-tickets:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    color: black;
+}
+
+
+/* Contact */
+.content-contact{
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px;
+    margin: 0 auto;
+}
+.contact-body {
+    padding: 32px 0;
+}
+.contact-info {
+    margin-left: 0px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+.contact-info i[class*="fa-solid"] {
+    width: 30px;
+}
+.contact-input .form-control{
+    margin-left: -8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 15px;
+}
+.contact-input .contact-btn {
+    margin: 16px 16px 16px 0;
+    padding: 8px 15px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    line-height: 22.5px;
+}
+.contact-input .contact-btn:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Map */
+.map-section img {
+    width: 100%;
+}
+
+/* Footer */
+#footer {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 16px;
+    justify-content: center;
+    align-items: center;
+}
+#footer .socials-list {
+    font-size: 24px;
+}
+#footer,
+#footer a {
+    color: #757575
+}
+#footer p {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.modal-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    line-height: 36px;
+    font-size: 22px;
+    padding: 8px 16px;
+}
+.modal-container {
+    position: relative;
+    width: 900px;
+    max-width: calc(100% -32px);
+    margin: auto 120px;
+    animation: MoveDown ease 0.6s ;
+}
+@keyframes MoveDown {
+    from {
+        opacity: 0.3;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.modal-close:hover {
+    background-color: #ccc;
+    color: black;
+}
+.modal-header {
+    display: flex;
+    width: 100%;
+    color: #fff;
+    background-color: #009688;
+    padding: 42px 16px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 4px;
+}
+.modal-header i {
+    margin-right: 16px;
+}
+.modal-body {
+    width: 100%;
+    background-color: #fff;
+    padding: 16px;
+}
+.modal-heading {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.modal-input {
+    width: 100%;
+    display: block;
+    margin-bottom: 16px;
+    padding: 8px;
+}
+.modal-btn {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 16px;
+    background-color: #009688;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 22.5px;
+}
+.modal-footer {
+    background-color: #fff;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+.modal-btn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.modal-footer > a {
+    display: inline-block;
+    color: #2196F3;
+    padding-bottom: 16px;
+    margin-left: 6px;
+}
+

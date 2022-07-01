@@ -1,0 +1,35 @@
+@media (max-width: 539px) {
+    #header #nav .nav_item {
+        display: block;
+    }
+    #header #nav {
+        width: 100%;
+    }
+    #header #nav .nav_wrap {
+        display: none;
+        position: relative;
+        background-color: white;
+        top: 46px;
+        left: calc(50% + 62px);
+        width: 50%;
+        box-shadow: 0 2px 10px #ccc;
+    }
+    #header #nav .nav_item a {
+        color: black;
+    }
+    #header #nav .nav_item:hover {
+        background-color: #ccc;
+    }
+    #search-nav {
+        display: none;
+    }
+    #search-nav-mobile {
+        display: block;
+    }
+
+    .content-about-band,
+    .content-tour-band,
+    .content-contact {
+        max-width: 100%;
+    }
+}
