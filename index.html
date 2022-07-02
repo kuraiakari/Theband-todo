@@ -62,15 +62,15 @@
             <p class="about">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <!-- Team -->
             <div class="team row">
-                <div class="col-third">
+                <div class="col-third col-full-mobile">
                     <p class="member-name">Name</p>
                     <img src="./assets/img/team/member1.jpg" alt="Name" class="member-img">
                 </div>
-                <div class="col-third">
+                <div class="col-third col-full-mobile">
                     <p class="member-name">Name</p>
                     <img src="./assets/img/team/member1.jpg" alt="Name" class="member-img">
                 </div>
-                <div class="col-third">
+                <div class="col-third col-full-mobile">
                     <p class="member-name">Name</p>
                     <img src="./assets/img/team/member1.jpg" alt="Name" class="member-img">
                 </div>
@@ -90,8 +90,8 @@
                 </ul>
 
                 <!-- Buy tickets -->
-                <div class="row m_-16 mb_37">
-                    <div class="col col-third info-tour-wrap">
+                <div class="row m_-16 mb_37 m0">
+                    <div class="col col-third col-full-mobile info-tour-wrap">
                         <img src="./assets/img/place/newyork.jpg" alt="New York" class="place-img">
                         <div class="place__body">
                             <h4 class="place__name">New York</h4>
@@ -100,7 +100,7 @@
                             <button onclick="openBuyTicket()" class="buy-tickets">Buy Tickets</button>
                         </div>
                     </div>
-                    <div class="col col-third info-tour-wrap">
+                    <div class="col col-third col-full-mobile info-tour-wrap">
                         <img src="./assets/img/place/paris.jpg" alt="Paris" class="place-img">
                         <div class="place__body">
                             <h4 class="place__name">Paris</h4>
@@ -109,7 +109,7 @@
                             <button onclick="openBuyTicket()" class="buy-tickets">Buy Tickets</button>
                         </div>
                     </div>
-                    <div class=" col col-third info-tour-wrap">
+                    <div class=" col col-third col-full-mobile info-tour-wrap">
                         <img src="./assets/img/place/sanfran.jpg" alt="San Francisco" class="place-img">
                         <div class="place__body">
                             <h4 class="place__name">San Francisco</h4>
@@ -126,7 +126,7 @@
             <h2 class="content__heading">CONTACT</h2>
             <p class="content__sub-heading">Fan? Drop a note!</p>
             <div class="row contact-body">
-                <div class="col col-half contact-info">
+                <div class="col col-half col-full-mobile contact-info">
                     <div class="row-left">
                         <i class="fa-solid fa-location-dot"></i>
                         Chicago, US
@@ -140,18 +140,18 @@
                         Email: mail@mail.com
                     </div>
                 </div>
-                <div class="col col-half contact-input">
+                <div class="col col-half col-full-mobile contact-input">
                     <form action="">
                         <div class="row">
-                            <div class="col col-half">
+                            <div class="col col-half col-full-mobile">
                                 <input type="text" name="Name" id="" class="form-control" placeholder="Name" required>
                             </div>
-                            <div class="col col-half">
+                            <div class="col col-half col-full-mobile">
                                 <input type="email" name="Email" id="" class="form-control" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col col-full">
+                            <div class="col col-full col-full-mobile">
                                 <input type="text" name="Message" id="" class="form-control" placeholder="Message" required>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
 
         var test = document.getElementById('search-nav-mobile')
         var opennavbar = document.querySelector('.nav_wrap')
-        var menuItems = document.querySelectorAll(".nav_wrap .nav_item a[href*='#']")
+        var menuItems = document.querySelectorAll(".nav_item a[href*='#']")
         // open and close when click humburher
         test.onclick = function() {
             // <!--check property display of opennavbar--!>
@@ -245,19 +245,37 @@
 
             // <!--Check property height of opennavbar--!>
             var heightNav = opennavbar.clientHeight
-            if ( heightNav === 0){
+            if ( heightNav === 0){   
                 opennavbar.style.display = 'block';
             }
             else {
                 opennavbar.style.display = 'none';
             }
         }
-
         //close navbar when click element a in navbar
         for ( var i = 0; i < menuItems.length; i++) {
-            const menuItem = menuItems[i];
+            var menuItem = menuItems[i];
+            var indexParent;
+            var checkclick = 0;
             menuItem.addEventListener('click', function(e){
-                opennavbar.style.display = 'none';
+                var Parentmenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub-nav');
+                var SubNav = document.querySelector('.sub-nav')
+                if (Parentmenu) {
+                    indexParent = this;
+                    checkclick++;
+                    console.log(checkclick)
+                    if (checkclick % 2 == 0)
+                        SubNav.style.display = 'none';
+                    else 
+                        SubNav.style.display = 'block';
+                    e.preventDefault();
+                }
+                else {
+                    indexParent.style.display = 'block';
+                    opennavbar.style.display = 'none';
+                    SubNav.style.display = 'none';
+                    checkclick = 0;
+                }
             })
         }
 
