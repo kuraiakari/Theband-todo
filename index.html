@@ -25,6 +25,7 @@
                         More
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
+                    <!-- Subnav -->
                     <ul class="sub-nav">
                         <li class="sub-nav__item"><a href="#">Merchandise</a></li>
                         <li class="sub-nav__item"><a href="#">Extras</a></li>
@@ -59,6 +60,7 @@
             <h2 class="content__heading">THE BAND</h2>
             <p class="content__sub-heading">We love music</p>
             <p class="about">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <!-- Team -->
             <div class="team row">
                 <div class="col-third">
                     <p class="member-name">Name</p>
@@ -229,9 +231,29 @@
         var test = document.getElementById('search-nav-mobile')
         var opennavbar = document.querySelector('.nav_wrap')
         var menuItems = document.querySelectorAll(".nav_wrap .nav_item a[href*='#']")
+        // open and close when click humburher
         test.onclick = function() {
-            opennavbar.style.display = 'block';
+            // <!--check property display of opennavbar--!>
+            // var display = window.getComputedStyle(opennavbar).display // có thể lấy thuộc tính css external
+            // if ( display === 'none'){
+            //     opennavbar.style.display = 'block'; // không thể lấy hay sửa thuộc tính css external
+            // }
+            // else {
+            //     opennavbar.style.display = 'none';
+            // }
+
+
+            // <!--Check property height of opennavbar--!>
+            var heightNav = opennavbar.clientHeight
+            if ( heightNav === 0){
+                opennavbar.style.display = 'block';
+            }
+            else {
+                opennavbar.style.display = 'none';
+            }
         }
+
+        //close navbar when click element a in navbar
         for ( var i = 0; i < menuItems.length; i++) {
             const menuItem = menuItems[i];
             menuItem.addEventListener('click', function(e){

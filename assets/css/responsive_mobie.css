@@ -13,12 +13,33 @@
         left: calc(50% + 62px);
         width: 50%;
         box-shadow: 0 2px 10px #ccc;
+        animation: fadein ease-in 0.3s
+    }
+    @keyframes fadein {
+        from {
+            opacity: 0.6;
+        }
+        to {
+            opacity: 1;
+        }
     }
     #header #nav .nav_item a {
         color: black;
     }
     #header #nav .nav_item:hover {
         background-color: #ccc;
+    }
+    #header #nav .nav_item::before {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        height: 0.2px;
+        background-color: #ccc;
+    }
+    #header #nav .nav_item:first-child::before {
+        content: "";
+        display: none;
     }
     #search-nav {
         display: none;
