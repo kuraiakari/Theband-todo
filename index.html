@@ -227,61 +227,61 @@
 
     <!-- Open navbar trên điện thoại -->
     <script>
-
         var NavMobile = document.getElementById('search-nav-mobile')
         var opennavbar = document.querySelector('.nav_wrap')
         var menuItems = document.querySelectorAll(".nav_item a[href*='#']")
+        var header = document.getElementById('header')
         // open and close when click humburher
-        NavMobile.onclick = function() {
-            // <!--check property display of opennavbar--!>
-            // var display = window.getComputedStyle(opennavbar).display // có thể lấy thuộc tính css external
-            // if ( display === 'none'){
-            //     opennavbar.style.display = 'block'; // không thể lấy hay sửa thuộc tính css external
-            // }
-            // else {
-            //     opennavbar.style.display = 'none';
-            // }
+        var widthcurrent = window.getComputedStyle(header).width
+        if (widthcurrent < '540px') {
+            NavMobile.onclick = function() {
+                // <!--check property display of opennavbar--!>
+                // var display = window.getComputedStyle(opennavbar).display // có thể lấy thuộc tính css external
+                // if ( display === 'none'){
+                //     opennavbar.style.display = 'block'; // không thể lấy hay sửa thuộc tính css external
+                // }
+                // else {
+                //     opennavbar.style.display = 'none';
+                // }
 
 
-            // <!--Check property height of opennavbar--!>
-            var heightNav = opennavbar.clientHeight
-            if ( heightNav === 0){   
-                opennavbar.style.display = 'block';
-            }
-            else {
-                opennavbar.style.display = 'none';
-            }
-        }
-        //close navbar when click element a in navbar
-        for ( var i = 0; i < menuItems.length; i++) {
-            var menuItem = menuItems[i];
-            var indexParent;
-            var checkclick = 0;
-            menuItem.addEventListener('click', function(e){
-                var Parentmenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub-nav');
-                //nextElementSibling kiểm tra class đồng cấp tiếp theo
-                //class.contains('string') kiểm tra trong list class có class string hay không. return boonlan  
-
-                // <!-- mở/đóng subnav --!>
-                var SubNav = document.querySelector('.sub-nav')
-                if (Parentmenu) {
-                    indexParent = this;
-                    checkclick++;
-                    if (checkclick % 2 == 0)
-                        SubNav.style.display = 'none';
-                    else 
-                        SubNav.style.display = 'block';
-                    e.preventDefault();
+                // <!--Check property height of opennavbar--!>
+                var heightNav = opennavbar.clientHeight
+                if ( heightNav === 0){   
+                    opennavbar.style.display = 'block';
                 }
-
-
                 else {
-                    indexParent.style.display = 'block';
                     opennavbar.style.display = 'none';
-                    SubNav.style.display = 'none';
-                    checkclick = 0;
                 }
-            })
+            }
+            //close navbar when click element a in navbar
+            for ( var i = 0; i < menuItems.length; i++) {
+                var menuItem = menuItems[i];
+                var checkclick = 0;
+                menuItem.addEventListener('click', function(e){                    var Parentmenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub-nav');
+                    //nextElementSibling kiểm tra class đồng cấp tiếp theo
+                    //class.contains('string') kiểm tra trong list class có class string hay không. return boonlan  
+
+                    // <!-- mở/đóng subnav --!>
+                    var SubNav = document.querySelector('.sub-nav')
+                    if (Parentmenu) {
+                        indexParent = this;
+                        checkclick++;
+                        if (checkclick % 2 == 0)
+                            SubNav.style.display = 'none';
+                        else 
+                            SubNav.style.display = 'block';
+                        e.preventDefault();
+                    }
+
+
+                    else {
+                        opennavbar.style.display = 'none';
+                        SubNav.style.display = 'none';
+                        checkclick = 0;
+                    }
+                })
+            }
         }
 
     </script>
