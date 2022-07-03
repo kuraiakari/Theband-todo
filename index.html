@@ -258,7 +258,8 @@
             for ( var i = 0; i < menuItems.length; i++) {
                 var menuItem = menuItems[i];
                 var checkclick = 0;
-                menuItem.addEventListener('click', function(e){                    var Parentmenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub-nav');
+                menuItem.addEventListener('click', function(e){                    
+                    var Parentmenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub-nav');
                     //nextElementSibling kiểm tra class đồng cấp tiếp theo
                     //class.contains('string') kiểm tra trong list class có class string hay không. return boonlan  
 
