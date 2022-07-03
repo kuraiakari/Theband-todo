@@ -26,7 +26,7 @@
         left: calc(50% + 62px);
         width: 50%;
         box-shadow: 0 2px 10px #ccc;
-        animation: fadein ease-in 0.3s
+        animation: fadein ease-in 0.2s
     }
     @keyframes fadein {
         from {
@@ -39,6 +39,8 @@
     #header #nav .nav_item a {
         color: black;
         text-align: left;
+        font-size: 16px;
+        font-weight: 300;
     }
     #header #nav .sub-nav {
         width: 100%;
@@ -69,6 +71,9 @@
     }
     #header #nav .sub-nav .sub-nav__item a {
         padding-left: 32px;
+        font-size: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
     #search-nav {
         display: none;

@@ -228,11 +228,11 @@
     <!-- Open navbar trên điện thoại -->
     <script>
 
-        var test = document.getElementById('search-nav-mobile')
+        var NavMobile = document.getElementById('search-nav-mobile')
         var opennavbar = document.querySelector('.nav_wrap')
         var menuItems = document.querySelectorAll(".nav_item a[href*='#']")
         // open and close when click humburher
-        test.onclick = function() {
+        NavMobile.onclick = function() {
             // <!--check property display of opennavbar--!>
             // var display = window.getComputedStyle(opennavbar).display // có thể lấy thuộc tính css external
             // if ( display === 'none'){
@@ -259,17 +259,22 @@
             var checkclick = 0;
             menuItem.addEventListener('click', function(e){
                 var Parentmenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub-nav');
+                //nextElementSibling kiểm tra class đồng cấp tiếp theo
+                //class.contains('string') kiểm tra trong list class có class string hay không. return boonlan  
+
+                // <!-- mở/đóng subnav --!>
                 var SubNav = document.querySelector('.sub-nav')
                 if (Parentmenu) {
                     indexParent = this;
                     checkclick++;
-                    console.log(checkclick)
                     if (checkclick % 2 == 0)
                         SubNav.style.display = 'none';
                     else 
                         SubNav.style.display = 'block';
                     e.preventDefault();
                 }
+
+
                 else {
                     indexParent.style.display = 'block';
                     opennavbar.style.display = 'none';
