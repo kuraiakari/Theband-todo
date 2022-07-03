@@ -19,7 +19,9 @@ html {
 .mb_37 {
     margin-bottom: 37px;
 }
-
+.ml-8 {
+    margin-left: 8px;
+}
 .row {
     display: flex;
     justify-content: space-between;
@@ -106,7 +108,7 @@ html {
     color: black;
     text-decoration: none;
     display: block;
-    padding:  8px 16px;
+    padding:  12px 16px;
     line-height: 22.5px;
 }
 
@@ -153,8 +155,9 @@ html {
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: #ccc;
+    color: #fff;
     padding: 32px 16px;
+    text-shadow: 0 0 1px #000;
 }
 
 #slider .text__header {
@@ -290,6 +293,7 @@ html {
 }
 
 .info-tour-wrap .place__body {
+    width: 100%;
     background-color: #fff;
     display: inline-block;
     padding: 0 16px;
@@ -319,7 +323,7 @@ html {
 
 .info-tour-wrap .buy-tickets {
     background-color: black;
-    padding: 8px 16px;
+    padding: 12px 16px;
     margin-bottom: 16px;
     color: #fff;
     font-size: 15px;
@@ -346,23 +350,25 @@ html {
 }
 .contact-info {
     margin-left: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     font-size: 18px;
     line-height: 1.4;
     font-weight: 300;
+    padding: 6px 0;
 }
 .contact-info i[class*="fa-solid"] {
     width: 30px;
+    line-height: 30px;
 }
 .contact-input .form-control{
-    padding: 8px;
+    padding: 12px 8px;
     margin-bottom: 8px;
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
 }
 .contact-input .contact-btn {
     margin: 16px 16px 16px 0;
-    padding: 8px 15px;
+    padding: 12px 15px;
     background-color: black;
     color: #fff;
     border: none;
@@ -388,15 +394,16 @@ html {
     align-items: center;
 }
 #footer .socials-list {
-    font-size: 24px;
+    font-size:30px;
 }
 #footer,
 #footer a {
+    margin: 0 8px;
     color: #757575
 }
 #footer p {
-    margin: 15px 0;
-    font-size: 15px;
+    margin: 30px 0;
+    font-size: 16px;
 }
 
 
@@ -431,11 +438,11 @@ html {
     color: #fff;
     line-height: 36px;
     font-size: 22px;
-    padding: 8px 16px;
+    padding: 12px 16px;
 }
 .modal-container {
     position: relative;
-    width: 900px;
+    width: 100%;
     max-width: calc(100% -32px);
     margin: auto 120px;
     animation: MoveDown ease 0.6s ;

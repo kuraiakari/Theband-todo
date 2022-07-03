@@ -1,10 +1,10 @@
-@media (max-width: 539px) {
+@media (max-width: 739px) {
     .row {
         flex-direction: column;
         align-items: center;
     }
     .row-left {
-        align-items: flex-start;
+        align-items: center;
     }
     .full-width {
         width: 100%;
@@ -89,5 +89,19 @@
     .content-tour-band,
     .content-contact {
         max-width: 100%;
+    }
+    .modal-container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .modal-input {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .contact-input .contact-btn {
+        margin-right: 0;
+    }
+    .contact-input .send-mobile {
+        margin-left: 0;
     }
 }
