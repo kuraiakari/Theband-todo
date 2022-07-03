@@ -345,7 +345,7 @@ html {
     padding: 32px 0;
 }
 .contact-info {
-    margin-left: 0px;
+    margin-left: 8px;
     margin-bottom: 16px;
     font-size: 18px;
     line-height: 1.4;
@@ -355,7 +355,6 @@ html {
     width: 30px;
 }
 .contact-input .form-control{
-    margin-left: -8px;
     padding: 8px;
     margin-bottom: 8px;
     width: 100%;
