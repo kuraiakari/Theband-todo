@@ -232,8 +232,8 @@
         var menuItems = document.querySelectorAll(".nav_item a[href*='#']")
         var header = document.getElementById('header')
         // open and close when click humburher
-        var widthcurrent = window.getComputedStyle(header).width
-        if (widthcurrent < '540px') {
+        var widthcurrent = screen.width
+        if (widthcurrent < 540) {
             console.log(widthcurrent)
             NavMobile.onclick = function() {
                 // <!--check property display of opennavbar--!>
