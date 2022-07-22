@@ -142,14 +142,25 @@ html {
     color: black;
 }
 
-#slider {
+.slider-img-0 {
     margin-top: 46px;
     padding-top: 50%;
     background: url(../img/slider/chicago.jpg) top center / cover no-repeat;
     position: relative;
 }
-
-#slider .text__container {
+.slider-img-1 {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(../img/slider/losAngeles.jpg) top center / cover no-repeat;
+    position: relative;
+}
+.slider-img-2 {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(../img/slider/newYork.jpg) top center / cover no-repeat;
+    position: relative;
+}
+.slider .text__container {
     display: block;
     position: absolute;
     bottom: 0;
@@ -160,7 +171,7 @@ html {
     text-shadow: 0 0 1px #000;
 }
 
-#slider .text__header {
+.slider .text__header {
     display: block;
     height: auto;
     margin: 25px 0;
@@ -169,7 +180,7 @@ html {
     font-family: "Segor UI", Arial , sans-serif;
 }
 
-#slider .text__description {
+.slider .text__description {
     display: block;
     margin-bottom: 15px;
     font-size: 15px;
