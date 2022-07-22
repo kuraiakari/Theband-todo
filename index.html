@@ -247,6 +247,17 @@
         var widthcurrent = screen.width
         if (widthcurrent < 740) {
             console.log(widthcurrent)
+            document.onclick = ((e)=>{
+                var heightNav = opennavbar.clientHeight
+                if (!e.target.closest('#search-nav-mobile')){
+                    if (!e.target.closest('.nav_item')){
+                        if (heightNav!=0) {
+                            opennavbar.style.display = 'none';
+                        }
+                    }
+                }
+            })
+            //close navbar when click hamburger
             NavMobile.onclick = function() {
                 // <!--check property display of opennavbar--!>
                 // var display = window.getComputedStyle(opennavbar).display // có thể lấy thuộc tính css external
