@@ -227,8 +227,8 @@
         </div>
     </div>
 
-    <!-- Mua vé  -->
     <script>
+        // <!-- Mua vé  -->
         // Open form buy ticket
         function openBuyTicket() {
             document.querySelector('.modal').classList.add('modal-open')  //sử dụng querySelector để gọi được nhiều kiểu Selector : Id, class,...
@@ -237,10 +237,8 @@
         function closeBuyTicket() {
             document.getElementById('modal').classList.remove('modal-open') //sử dụng getelementById chỉ gọi duy nhất được Selector ID 
         }
-    </script>
-
-    <!-- Open navbar trên điện thoại -->
-    <script>
+    
+        // Open navbar trên điện thoại -->
         var NavMobile = document.getElementById('search-nav-mobile')
         var opennavbar = document.querySelector('.nav_wrap')
         var menuItems = document.querySelectorAll(".nav_item a[href*='#']")
